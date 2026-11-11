@@ -1,0 +1,237 @@
+/* Leasevoorstel form styles, transcribed from the <style> block inside the source's form and scoped to .elox-leasevoorstel. */
+.elox-leasevoorstel .elox-form-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  font-family: inherit;
+  color: #1a1a1a;
+}
+
+.elox-leasevoorstel .elox-form-wrap * {
+  box-sizing: border-box;
+}
+
+.elox-leasevoorstel .elox-hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.elox-leasevoorstel .elox-hero .elox-kicker {
+  display: inline-block;
+  background: #1E5A3A;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  margin-bottom: 14px;
+}
+
+.elox-leasevoorstel .elox-hero h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: #1E5A3A;
+  font-weight: 700;
+}
+
+.elox-leasevoorstel .elox-hero p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: #444;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.elox-leasevoorstel .elox-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 36px;
+}
+
+.elox-leasevoorstel .elox-card {
+  background: #fff;
+  border: 1px solid #e5e1d6;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.elox-leasevoorstel .elox-card h3 {
+  font-size: 20px;
+  margin: 0 0 8px;
+  color: #1E5A3A;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.elox-leasevoorstel .elox-card .elox-card-sub {
+  font-size: 14px;
+  color: #E8742C;
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.elox-leasevoorstel .elox-card p {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: #444;
+  margin: 0 0 14px;
+}
+
+.elox-leasevoorstel .elox-card .elox-card-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E5A3A;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.elox-leasevoorstel .elox-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.elox-leasevoorstel .elox-card ul li {
+  position: relative;
+  padding: 6px 0 6px 22px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.elox-leasevoorstel .elox-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: #1E5A3A;
+  font-weight: 700;
+}
+
+.elox-leasevoorstel .elox-form-title {
+  font-size: 20px;
+  color: #1E5A3A;
+  font-weight: 700;
+  margin: 0 0 18px;
+  padding-top: 20px;
+  border-top: 2px solid #e5e1d6;
+}
+
+.elox-leasevoorstel .elox-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+  margin-bottom: 20px;
+}
+
+.elox-leasevoorstel .elox-form-grid .elox-field-full {
+  grid-column: 1 / -1;
+}
+
+.elox-leasevoorstel .elox-form-grid label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #1E5A3A;
+  margin-bottom: 6px;
+}
+
+.elox-leasevoorstel .elox-form-grid input[type="text"],
+.elox-leasevoorstel .elox-form-grid input[type="email"],
+.elox-leasevoorstel .elox-form-grid input[type="tel"],
+.elox-leasevoorstel .elox-form-grid input[type="number"],
+.elox-leasevoorstel .elox-form-grid select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d9d4c7;
+  border-radius: 8px;
+  font-size: 14.5px;
+  background: #fff;
+  color: #1a1a1a;
+  font-family: inherit;
+  transition: border-color .15s;
+}
+
+.elox-leasevoorstel .elox-form-grid input:focus,
+.elox-leasevoorstel .elox-form-grid select:focus {
+  outline: none;
+  border-color: #1E5A3A;
+}
+
+.elox-leasevoorstel .elox-privacy {
+  margin: 18px 0 22px;
+  font-size: 13.5px;
+  color: #555;
+}
+
+.elox-leasevoorstel .elox-privacy a {
+  color: #1E5A3A;
+  text-decoration: underline;
+}
+
+.elox-leasevoorstel .elox-submit-row {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.elox-leasevoorstel .elox-submit-row input[type="submit"] {
+  background: #E8742C;
+  color: #fff;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s;
+  font-family: inherit;
+}
+
+.elox-leasevoorstel .elox-submit-row input[type="submit"]:hover {
+  background: #d0651f;
+}
+
+.elox-leasevoorstel .elox-submit-row .elox-cta-note {
+  font-size: 13px;
+  color: #777;
+  margin: 10px 0 0;
+}
+
+.elox-leasevoorstel .elox-alt-contact {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e1d6;
+  font-size: 14px;
+  color: #555;
+}
+
+.elox-leasevoorstel .elox-alt-contact a {
+  color: #1E5A3A;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.elox-leasevoorstel .elox-alt-contact a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width:720px) {
+  .elox-leasevoorstel .elox-cards {
+    grid-template-columns: 1fr;
+  }
+  .elox-leasevoorstel .elox-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .elox-leasevoorstel .elox-hero h2 {
+    font-size: 24px;
+  }
+  .elox-leasevoorstel .elox-card {
+    padding: 20px;
+  }
+}

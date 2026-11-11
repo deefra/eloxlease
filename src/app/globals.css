@@ -1,0 +1,2 @@
+/* Tailwind supplies the base reset; the site's styles live in src/components/sites/eloxlease. */
+@import "tailwindcss";

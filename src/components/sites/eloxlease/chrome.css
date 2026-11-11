@@ -1,0 +1,677 @@
+/*
+ * Shared layer for every eloxlease.nl page: the Woodmart theme defaults (visible on pages without
+ * their own stylesheet, such as Over ons and Leasevoorstel) plus the header, mobile menu, footer and
+ * floating buttons. Page stylesheets are scoped to .elox-<page> and load after this file.
+ */
+
+.elox {
+  --elox-green: #125432;
+  --elox-green-dark: #0d3e25;
+  --elox-lightgreen: #d7e9a3;
+  --elox-cream: #fff7ee;
+  --elox-orange: #fb5315;
+  --elox-orange-dark: #d94409;
+
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #767676;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.elox img {
+  max-width: 100%;
+  height: auto;
+}
+.elox a {
+  color: var(--elox-orange);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.elox a:hover {
+  color: var(--elox-green);
+}
+.elox .container {
+  max-width: 1222px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.elox strong,
+.elox b {
+  font-weight: 600;
+}
+.elox h1,
+.elox h2,
+.elox h3,
+.elox h4,
+.elox h5,
+.elox h6 {
+  font-family: var(--font-kumbh), Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #242424;
+  margin-bottom: 20px;
+}
+.elox h1 {
+  font-size: 28px;
+}
+.elox h2 {
+  font-size: 24px;
+}
+.elox h3 {
+  font-size: 22px;
+}
+.elox h4 {
+  font-size: 18px;
+}
+.elox p {
+  margin-bottom: 20px;
+}
+.elox main ul,
+.elox main ol {
+  padding-left: 17px;
+  margin-bottom: 20px;
+}
+.elox main ul {
+  list-style: disc;
+}
+.elox main li {
+  margin-bottom: 10px;
+}
+.elox main li:last-child {
+  margin-bottom: 0;
+}
+
+/* Woodmart buttons */
+.elox .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 42px;
+  padding: 5px 20px;
+  border: 0 solid transparent;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  color: #333;
+  background-color: #f3f3f3;
+  transition: all 0.25s ease;
+}
+.elox .btn-color-alt {
+  background-color: var(--elox-orange);
+  color: #fff;
+}
+.elox .btn-color-primary {
+  background-color: var(--elox-green);
+  color: #fff;
+}
+.elox .btn-color-alt:hover,
+.elox .btn-color-primary:hover {
+  color: #fff;
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.1);
+}
+.elox .btn-style-bordered {
+  background-color: transparent;
+  border-width: 2px;
+}
+.elox .btn-style-bordered.btn-color-alt {
+  border-color: var(--elox-orange);
+  color: var(--elox-orange);
+}
+.elox .btn-style-bordered.btn-color-alt:hover {
+  background-color: var(--elox-orange);
+  color: #fff;
+  box-shadow: none;
+}
+
+/* Woodmart <button> defaults */
+.elox button {
+  min-height: 42px;
+  font-size: 13px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Woodmart form fields */
+.elox input[type="text"],
+.elox input[type="email"],
+.elox input[type="tel"],
+.elox input[type="number"],
+.elox select,
+.elox textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 42px;
+  padding: 0 15px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  background: transparent;
+  font-size: 14px;
+  color: rgb(15, 23, 42);
+  box-shadow: none;
+  transition: border-color 0.5s ease;
+}
+.elox input,
+.elox select,
+.elox textarea {
+  vertical-align: middle;
+}
+.elox input[type="number"] {
+  text-align: center;
+}
+.elox textarea {
+  min-height: 190px;
+  padding: 10px 15px;
+  resize: vertical;
+}
+.elox input::placeholder,
+.elox textarea::placeholder {
+  color: var(--elox-lightgreen);
+}
+.elox input:focus,
+.elox select:focus,
+.elox textarea:focus {
+  outline: none;
+  border-color: var(--elox-orange);
+}
+.elox label {
+  display: block;
+  margin-bottom: 5px;
+  color: #242424;
+}
+.elox input[type="checkbox"] {
+  margin-right: 5px;
+}
+.elox input[type="submit"] {
+  padding: 5px 20px;
+  font-size: 13px;
+}
+/* Woodmart's button typography wins over the pages' own submit-button font rules. */
+.elox input[type="submit"],
+.elox .wpcf7 input[type="submit"].wpcf7-submit {
+  font-family: var(--font-redhat), Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.elox table {
+  width: 100%;
+  margin-bottom: 35px;
+  border-collapse: collapse;
+  line-height: 1.4;
+}
+.elox th,
+.elox td {
+  padding: 15px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+  vertical-align: middle;
+  text-align: start;
+}
+.elox button[disabled],
+.elox input[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ========= HEADER (Woodmart) ========= */
+.elox .site-header {
+  position: relative;
+  z-index: 390;
+  height: 100px;
+}
+.elox .site-header-bar {
+  background: var(--elox-cream);
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.elox .site-header.is-sticky .site-header-bar {
+  position: fixed;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.elox .site-header-inner {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  transition:
+    height 0.3s,
+    max-height 0.3s;
+}
+.elox .site-header.is-sticky .site-header-inner {
+  height: 70px;
+}
+.elox .site-logo {
+  display: block;
+  flex: none;
+  height: 100%;
+}
+.elox .site-logo img {
+  height: 100%;
+  width: auto;
+  padding: 5px 0;
+  max-width: 215px;
+  object-fit: contain;
+}
+.elox .main-nav {
+  margin-left: 50px;
+  flex: 1;
+}
+.elox .main-nav ul {
+  display: flex;
+  gap: 5px 30px;
+  list-style: none;
+}
+.elox .main-nav a {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 5px 0;
+  font-family: var(--font-kumbh), Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #333;
+}
+.elox .main-nav a:hover,
+.elox .main-nav a[aria-current="page"] {
+  color: var(--elox-green);
+}
+.elox .header-phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.elox .header-phone img {
+  width: 32px;
+  height: 32px;
+}
+.elox .header-cta {
+  margin-left: 50px;
+}
+.elox .mobile-only {
+  display: none;
+}
+.elox .burger {
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: -10px;
+  color: #333;
+}
+.elox .burger:hover {
+  color: #333;
+}
+
+/* Mobile drawer */
+.elox .drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease-in-out,
+    visibility 0.25s ease-in-out;
+}
+.elox .drawer-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.elox .mobile-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+  width: 300px;
+  max-width: 100%;
+  overflow-y: auto;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.elox .mobile-drawer.is-open {
+  transform: none;
+}
+.elox .mobile-drawer ul {
+  list-style: none;
+}
+.elox .mobile-drawer a {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 5px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #333;
+}
+.elox .mobile-drawer a:hover,
+.elox .mobile-drawer a[aria-current="page"] {
+  color: var(--elox-green);
+}
+
+@media (max-width: 1024px) {
+  /* Space Woodmart reserves for its sticky mobile toolbar, which the source hides. */
+  .elox {
+    padding-bottom: 55px;
+  }
+  .elox .site-header {
+    height: 70px;
+  }
+  .elox .site-header-inner,
+  .elox .site-header.is-sticky .site-header-inner {
+    height: 70px;
+  }
+  .elox .desktop-only {
+    display: none;
+  }
+  .elox .mobile-only {
+    display: flex;
+  }
+  .elox .site-logo img {
+    max-width: 179px;
+  }
+  .elox .header-cta {
+    margin-left: 20px;
+  }
+}
+
+
+/* ========= FLOATING BUTTONS ========= */
+.elox .whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: transform 0.2s;
+}
+.elox .whatsapp-btn:hover {
+  transform: scale(1.08);
+  color: #fff;
+}
+/* The page stylesheets give this button a shadow, but on the source it computes to none everywhere. */
+.elox a.whatsapp-btn {
+  box-shadow: none;
+}
+.elox .whatsapp-btn svg {
+  width: 32px;
+  height: 32px;
+}
+.elox .scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 350;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
+  color: #333;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+  transition: all 0.25s ease;
+}
+.elox .scroll-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+.elox .scroll-top:hover {
+  color: #777;
+  background: #fff;
+}
+
+/* ========= FOOTER (Elementor) ========= */
+.elox .site-footer {
+  background: var(--elox-green);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0 15px;
+}
+.elox .site-footer a {
+  color: #fff;
+}
+.elox .site-footer a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.elox .footer-inner {
+  max-width: 1192px;
+  margin: 0 auto;
+  padding: 40px 0 35px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.elox .footer-col p {
+  margin: 0;
+}
+.elox .footer-col strong {
+  font-weight: 600;
+}
+.elox .footer-logo {
+  flex: 13.07 1 0;
+}
+.elox .footer-logo img {
+  width: 150px;
+  height: 150px;
+}
+.elox .footer-address {
+  flex: 18.17 1 0;
+}
+.elox .footer-pages {
+  flex: 27.13 1 0;
+}
+.elox .footer-cta {
+  flex: 36.59 1 0;
+  margin-top: -31px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.elox .footer-cta .footer-cta-title {
+  display: block;
+  height: 1.6em;
+  padding-top: 3px;
+  line-height: 1;
+}
+.elox .footer-cta .btn {
+  align-self: flex-start;
+}
+.elox .footer-cta .btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+.elox .footer-bottom {
+  background: #000;
+  padding: 0 15px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.elox .footer-bottom .footer-inner {
+  display: block;
+}
+.elox .footer-bottom p {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .elox .footer-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .elox .footer-col {
+    flex: none;
+  }
+}
+
+
+/* ========= CONTACT FORM 7 (plugin defaults) ========= */
+.elox .wpcf7-form-control-wrap {
+  position: relative;
+  display: block;
+}
+.elox .wpcf7-form-control-wrap[data-error]::after {
+  content: attr(data-error);
+  display: block;
+  color: #dc3232;
+  font-size: 1em;
+  font-weight: normal;
+}
+.elox .wpcf7-response-output {
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+  border: 2px solid #00a0d2;
+}
+.elox .wpcf7-response-output:empty {
+  display: none;
+}
+.elox .wpcf7-form.sent .wpcf7-response-output {
+  border-color: #46b450;
+}
+.elox .wpcf7-form.invalid .wpcf7-response-output {
+  border-color: #ffb900;
+}
+.elox .wpcf7-form.failed .wpcf7-response-output {
+  border-color: #dc3232;
+}
+.elox .wpcf7-list-item {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+/* Woodmart page background behind every page's content */
+.elox main {
+  background: var(--elox-cream);
+}
+/* Woodmart content container on pages built from theme widgets (Over ons, Leasevoorstel) */
+.elox .wd-content {
+  padding: 40px 15px;
+}
+/* Woodmart's Contact Form 7 widget restyles the submit button as an accented button. */
+.elox .wd-cf7 .wpcf7-form input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border: 0;
+  border-radius: 0;
+  background-color: var(--elox-green);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ========= PRODUCT PAGES: Elementor sections ========= */
+/* On Silence S02 and CookTek the Elementor stylesheet for these sections returns 404 on the source, so
+   they render unstyled: the page's own `section` padding applies, columns size to their content, and
+   the quote section sits on the cream page background with its white intro text. E-Cargobike's
+   stylesheet loads, giving the flush sections and the green, card-style quote section (--styled). */
+.elox .el-section--flush {
+  padding: 0;
+}
+.elox .el-quote {
+  overflow: hidden;
+}
+.elox .el-quote-inner {
+  display: flex;
+  margin: 0 -15px;
+}
+/* Like Elementor's widget wrap: a wrapping flex row, so a column's intrinsic width is the sum of its
+   widgets' widths, which decides how the two content-sized columns share the row. */
+.elox .el-quote-col {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex: 0 1 auto;
+  min-width: 0;
+  padding: 15px;
+}
+.elox .el-quote-col > * {
+  width: 100%;
+}
+.elox .el-quote--styled {
+  padding: 80px 24px;
+  background-image: linear-gradient(135deg, #0d3e25 0%, #125432 100%);
+}
+.elox .el-quote--styled .el-quote-info {
+  padding: 20px;
+}
+.elox .el-quote--styled .el-quote-form {
+  padding: 36px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 20px 50px 0 rgb(18 84 50 / 0.14);
+}
+@media (max-width: 767px) {
+  .elox .el-quote-inner {
+    flex-direction: column;
+  }
+}
+
+/* Elementor widget spacing (kit: 20px between widgets in a column) */
+.elox .el-widget {
+  margin-bottom: 20px;
+}
+
+/* Equivalents of the source's inline style attributes (!important keeps inline-style precedence) */
+.elox .intro-text {
+  color: var(--elox-muted) !important;
+  font-size: 18px !important;
+}
+.elox .eyebrow.on-dark {
+  color: var(--elox-lightgreen) !important;
+}
+.elox .rounded-shadow {
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+}
+.elox .quote-intro {
+  color: #fff !important;
+}
+.elox .centered-760 {
+  text-align: center !important;
+  max-width: 760px !important;
+  margin: 0 auto !important;
+}
+.elox .fs-30 {
+  font-size: 30px !important;
+}
+.elox .fs-22 {
+  font-size: 22px !important;
+}
+.elox .quote-form-title {
+  color: #0d3e25 !important;
+  margin-bottom: 24px !important;
+  font-size: 22px !important;
+  font-family: var(--font-inter), "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+}

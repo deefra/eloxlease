@@ -1,0 +1,378 @@
+/*
+ * Over ons (/contactonspagina/) — built from Elementor + Woodmart widgets on the source, so these rules
+ * reproduce that page's Elementor post CSS and the widget defaults, scoped to .elox-overons.
+ */
+
+/* ========= Elementor rows ========= */
+.elox-overons .intro-block {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 5% 5% 0;
+  background-color: #fff7ee;
+}
+.elox-overons .el-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.elox-overons .el-heading {
+  width: 45%;
+  max-width: 45%;
+}
+.elox-overons .el-heading-title {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--elox-green);
+}
+.elox-overons .el-text-editor {
+  width: 40%;
+  max-width: 40%;
+  font-weight: 600;
+  color: var(--elox-green);
+}
+.elox-overons .el-text-editor > :last-child,
+.elox-overons .title-after_title > :last-child,
+.elox-overons .wd-accordion-content-inner > :last-child {
+  margin-bottom: 0;
+}
+
+/* Divider with the fadeInLeft entrance animation */
+.elox-overons .el-divider {
+  display: flex;
+  width: 100%;
+  padding-block: 10px;
+}
+.elox-overons .el-divider-separator {
+  display: flex;
+  width: 105px;
+  border-top: 1px solid #212121;
+}
+.elox-overons .el-divider.is-invisible {
+  visibility: hidden;
+}
+.elox-overons .el-divider.is-animated {
+  animation: elox-fade-in-left 1.25s both;
+}
+@keyframes elox-fade-in-left {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .elox-overons .el-divider.is-animated {
+    animation: none;
+  }
+}
+
+.elox-overons .gallery-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.elox-overons .buttons-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.elox-overons .map-block {
+  padding: 10px 0;
+  margin-bottom: 59px;
+}
+.elox-overons .map-title {
+  margin-bottom: 30px;
+}
+.elox-overons .map-container {
+  position: relative;
+  height: 400px;
+}
+.elox-overons .map-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.elox-overons .contact-block {
+  display: flex;
+}
+.elox-overons .contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 50%;
+  min-width: 0;
+}
+.elox-overons .contact-faq {
+  padding: 15px 50px 15px 0;
+  border-right: 1px solid #e8e8e8;
+}
+.elox-overons .contact-form {
+  padding: 15px 0 15px 50px;
+}
+
+/* ========= Woodmart title ========= */
+.elox-overons .wd-title-text {
+  display: inline-block;
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--elox-green);
+}
+.elox-overons .wd-title-bordered .liner-continer {
+  display: flex;
+  align-items: center;
+}
+.elox-overons .wd-title-bordered .liner-continer::before,
+.elox-overons .wd-title-bordered .liner-continer::after {
+  content: "";
+  flex: 1 1 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+}
+.elox-overons .wd-title-bordered .liner-continer::before {
+  margin-right: 20px;
+}
+.elox-overons .wd-title-bordered .liner-continer::after {
+  margin-left: 20px;
+}
+.elox-overons .liner-continer:has(+ .title-after_title) {
+  margin-bottom: 10px;
+}
+.elox-overons .title-after_title {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--elox-green);
+}
+
+/* ========= Woodmart images gallery ========= */
+.elox-overons .wd-images-gallery {
+  position: relative;
+}
+.elox-overons .wd-carousel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 -5px;
+}
+.elox-overons .wd-gallery-item {
+  display: flex;
+  justify-content: center;
+  padding: 0 5px;
+}
+.elox-overons .wd-gallery-item a {
+  display: block;
+  width: 100%;
+}
+.elox-overons .wd-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.elox-overons .wd-btn-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-height: 0;
+  margin-top: -22px;
+  border-radius: 300px;
+  background: var(--elox-cream);
+  color: var(--elox-green);
+  transition: all 0.25s;
+}
+.elox-overons .wd-prev {
+  left: 0;
+}
+.elox-overons .wd-next {
+  right: 0;
+}
+
+/* PhotoSwipe-style lightbox */
+.elox-overons .pswp {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+}
+.elox-overons .pswp-image {
+  max-width: 100vw;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.elox-overons .pswp-counter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 44px;
+  color: #fff;
+  opacity: 0.75;
+}
+.elox-overons .pswp-close,
+.elox-overons .pswp-arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  color: #fff;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+.elox-overons .pswp-close:hover,
+.elox-overons .pswp-arrow:hover {
+  opacity: 1;
+}
+.elox-overons .pswp-close {
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+}
+.elox-overons .pswp-arrow {
+  top: 50%;
+  width: 70px;
+  height: 100px;
+  margin-top: -50px;
+}
+.elox-overons .pswp-arrow-left {
+  left: 0;
+}
+.elox-overons .pswp-arrow-right {
+  right: 0;
+}
+
+/* ========= Woodmart accordion ========= */
+.elox-overons .wd-accordion-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+}
+.elox-overons .wd-accordion-item:first-child {
+  border-top: 2px solid rgba(0, 0, 0, 0.105);
+}
+.elox-overons .wd-accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 0;
+  padding: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: start;
+  text-transform: none;
+  cursor: pointer;
+}
+.elox-overons .wd-accordion-title-text {
+  font-family: var(--font-lato), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--elox-green);
+  transition: color 0.25s;
+}
+.elox-overons .wd-accordion-opener {
+  display: flex;
+  flex: none;
+  color: #bbb;
+  transition: transform 0.25s;
+}
+.elox-overons .wd-accordion-title.wd-active .wd-accordion-opener {
+  transform: rotate(180deg);
+}
+.elox-overons .wd-accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.elox-overons .wd-accordion-content.wd-active {
+  grid-template-rows: 1fr;
+}
+.elox-overons .wd-accordion-content-inner {
+  overflow: hidden;
+}
+.elox-overons .wd-accordion-content.wd-active .wd-accordion-content-inner {
+  padding-bottom: 20px;
+}
+
+/* ========= Contact form (Woodmart CF7 widget) ========= */
+.elox-overons .contact-form .wpcf7-form input,
+.elox-overons .contact-form .wpcf7-form textarea {
+  color: var(--elox-green);
+}
+.elox-overons .contact-form .wpcf7-form input::placeholder,
+.elox-overons .contact-form .wpcf7-form textarea::placeholder {
+  color: var(--elox-green);
+}
+
+/* ========= Responsive (Elementor tablet/mobile breakpoints) ========= */
+@media (max-width: 1024px) {
+  .elox-overons .wd-title-text {
+    font-size: 20px;
+  }
+  .elox-overons .intro-block {
+    min-height: 600px;
+    padding: 10% 5% 0;
+  }
+  .elox-overons .el-row {
+    flex-direction: column;
+  }
+  .elox-overons .el-heading,
+  .elox-overons .el-text-editor {
+    width: 100%;
+    max-width: 100%;
+  }
+  .elox-overons .gallery-block {
+    margin-bottom: 0;
+  }
+  .elox-overons .contact-block {
+    flex-direction: column;
+  }
+  .elox-overons .contact-col {
+    width: 100%;
+  }
+  .elox-overons .contact-faq,
+  .elox-overons .contact-form {
+    padding: 0;
+    border: 0;
+  }
+}
+@media (max-width: 768px) {
+  /* Elementor adds padding to the "Transparantie & verantwoordelijkheid" heading on phones. */
+  .elox-overons .gallery-block > .el-row:last-child .el-heading {
+    padding: 10px;
+  }
+  .elox-overons .wd-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .elox-overons .wd-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .elox-overons .wd-gallery-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+  .elox-overons .wd-btn-arrow {
+    display: flex;
+  }
+}
